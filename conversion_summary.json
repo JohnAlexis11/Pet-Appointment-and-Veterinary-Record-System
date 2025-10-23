@@ -1,0 +1,27 @@
+{
+  "note": "This package is prepared for PHP Desktop. Copy the contents of this folder into PHP Desktop root or place the phpdesktop runtime next to it and run phpdesktop-chrome.exe.",
+  "output_path": "/mnt/data/Petlandia_edited/phpdesktop_ready",
+  "files_count": 36,
+  "modified_php_examples": [
+    "www/Petlandia 2.0/petlandia/admin_dashboard.php",
+    "www/Petlandia 2.0/petlandia/create_users.php",
+    "www/Petlandia 2.0/petlandia/login_process.php",
+    "www/Petlandia 2.0/petlandia/staff_dashboard.php",
+    "www/Petlandia 2.0/petlandia/view_appointment.php",
+    "www/Petlandia 2.0/petlandia/view_history_staff.php",
+    "www/Petlandia 2.0/petlandia/admin/admin_appointments_view.php",
+    "www/Petlandia 2.0/petlandia/admin/create_account.php",
+    "www/Petlandia 2.0/petlandia/admin/delete_file_record.php",
+    "www/Petlandia 2.0/petlandia/admin/edit_vet_record.php",
+    "www/Petlandia 2.0/petlandia/admin/veterinary_records_admin.php",
+    "www/Petlandia 2.0/petlandia/admin/view_history_admin.php",
+    "www/Petlandia 2.0/petlandia/staff/appointment_success.php",
+    "www/Petlandia 2.0/petlandia/staff/calendar_view.php",
+    "www/Petlandia 2.0/petlandia/staff/owner_registration.php",
+    "www/Petlandia 2.0/petlandia/staff/pet_history.php",
+    "www/Petlandia 2.0/petlandia/staff/pet_registration.php",
+    "www/Petlandia 2.0/petlandia/staff/veterinary_records.php",
+    "www/Petlandia 2.0/petlandia/staff/view_record.php"
+  ],
+  "converted_sql_snippet": "\n\n\n\n\n\n\n\n\nSET SQL_MODE = \"NO_AUTO_VALUE_ON_ZERO\";\nSTART TRANSACTION;\nSET time_zone = \"+00:00\";\n\n\n;\n;\n;\n;\n\n\n\n\n\n\n\n\n\n\n\nCREATE TABLE \"appointments\" (\n  \"appointment_id\" INTEGER NOT NULL,\n  \"owner_id\" INTEGER NOT NULL,\n  \"pet_id\" INTEGER NOT NULL,\n  \"appointment_date\" date NOT NULL,\n  \"appointment_time\" time NOT NULL,\n  \"reason\" text NOT NULL,\n  \"status\" enum('Pending','Confirmed','Completed','Cancelled');\nDEFAULT 'Pending',\n  \"created_by\" INTEGER DEFAULT NULL,\n  \"notes\" text DEFAULT NULL,\n  \"created_at\" timestamp NOT NULL DEFAULT current_timestamp();\n);\nCOLLATE=utf8mb4_general_ci;\n\n\n\n\n\nINSERT INTO \"appointments\" (\"appointment_id\", \"owner_id\", \"pet_id\", \"appointment_date\", \"appointment_time\", \"reason\", \"status\", \"created_by\", \"notes\", \"created_at\");\nVALUES\n(34, 29, 32, '2024-07-31', '13:00:00', 'Check Up', 'Pending', 4, NULL, '2024-07-27 05:08:38');\n,\n(35, 30, 33, '2024-07-28', '08:00:00', 'Vaccine', 'Completed', 4, NULL, '2024-07-27 05:10:24');\n,\n(37, 32, 35, '2024-07-30', '13:00:00', 'aaa', 'Cancelled', 4, NULL, '2024-07-27 12:08:22');\nCREATE TABLE \"file_records\" (\n  \"file_id\" INTEGER NOT NULL,\n  \"owner_name\" varchar(100);\nNOT NULL,\n  \"pet_name\" varchar(100);\nNOT NULL,\n  \"address\" varchar(255);\nDEFAULT NULL,\n  \"contact_number\" varchar(50);\nDEFAULT NULL,\n  \"email\" varchar(100);\nDEFAULT NULL,\n  \"color\" varchar(50);\nDEFAULT NULL,\n  \"microchip_no\" varchar(100);\nDEFAULT NULL,\n  \"created_by\" varchar(100);\nNOT NULL,\n  \"created_at\" datetime NOT NULL\n);\nCOLLATE=utf8mb4_general_ci;\n\n\n\n\n\nINSERT INTO \"file_records\" (\"file_id\", \"owner_name\", \"pet_name\", \"address\", \"contact_number\", \"email\", \"color\", \"microchip_no\", \"created_by\", \"created_at\");\nVALUES\n(2, 'John Alexis Amponin', 'Black', 'Bulacan', '123', '', '', '', 'staff1', '2024-07-28 08:54:00');\nCREATE TABLE \"owners\" (\n  \"owner_id\" INTEGER NOT NULL,\n  \"first_name\" varchar(100);\nNOT NULL,\n  \"last_name\" varchar(100);\nNOT NULL,\n  \"address\" varchar(255);\nNOT NULL,\n  \"contact_number\" varchar(20);\nNOT NULL,\n  \"email\" varchar(100);\nDEFA"
+}
