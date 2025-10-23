@@ -1,4 +1,4 @@
-<br>Amponin, John Alexis <br?
-<br>Duenas, Jhazen <br?
-<br>Geronimo, Reymark <br>
-<br>Ausa, Justin <br>
+Amponin, John Alexis <br>
+Duenas, Jhazen <br>
+Geronimo, Reymark <br>
+Ausa, Justin <br>
